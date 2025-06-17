@@ -1,9 +1,10 @@
 const socket = io();
+
 const chatForm = document.getElementById('chat-form');
 const msgInput = document.getElementById('msg-input');
 const chatBox = document.getElementById('chat-box');
 
-chatForm.addEventListener('submit', e => {
+chatForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const msg = msgInput.value;
   if (msg.trim()) {

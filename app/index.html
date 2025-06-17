@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Real-Time Chat</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Socket.IO Chat</title>
 </head>
 <body>
-  <div class="chat-container">
-    <div id="chat-box"></div>
-    <form id="chat-form">
-      <input id="msg-input" type="text" placeholder="Message..." autocomplete="off" />
-      <button>Send</button>
-    </form>
-  </div>
+  <h2>Chat App</h2>
+  <div id="chat-box" style="height: 200px; border: 1px solid #ccc; overflow-y: scroll; margin-bottom: 10px;"></div>
+  <form id="chat-form">
+    <input id="msg-input" autocomplete="off" placeholder="Type a message" />
+    <button type="submit">Send</button>
+  </form>
+
+  <!-- Load Socket.IO client from server -->
   <script src="/socket.io/socket.io.js"></script>
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
